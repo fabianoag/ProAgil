@@ -149,7 +149,7 @@ namespace ProAgil.WebAPI.Controllers
                 ).ToArray();
 
                 var redesSociais = evento.RedesSociais.Where(
-                    rede => !idLotes.Contains(rede.Id)
+                    rede => !idRedesSociais.Contains(rede.Id)
                 ).ToArray();
 
                 if (lotes.Length > 0) _repo.DeleteRange(lotes);
